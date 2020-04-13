@@ -60,8 +60,14 @@ const PaginationCommon = props => {
           break;
         }
       }
+      console.log("pages: " , pages);
+      console.log("total Pages:" , totalPages);
       return [1, ...pages, totalPages];
     }
+    console.log("pages: " , pages);
+    console.log("total Pages:" , totalPages);
+    
+    
     return range(1, totalPages);
   };
 

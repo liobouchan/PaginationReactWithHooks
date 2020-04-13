@@ -12,8 +12,14 @@ const CommentWithPagination = () => {
 
   const onPageChanged = useCallback(
     (event, page) => {
+      console.log("Esto es el page:" , page)
       event.preventDefault();
-      setCurrentPage(page);
+      if(page > 0){
+        setCurrentPage(page);
+      }else{
+        console.log("La pagina ya es menor que uno es imposible");
+        
+      }
     },
     [currentPage]
   );
